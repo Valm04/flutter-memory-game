@@ -8,27 +8,29 @@ Cada nivel aumenta la dificultad y el jugador recibe **retroalimentación inmedi
 ## 🎮 Screenshots / GIFs
 
 ### 1. Pantalla de inicio
-![HomeScreen](assets/images/home.png)
+![HomeScreen](assets/images/home.jpeg)  
 *Botón “Play” con diseño animado, fondo colorido y acceso al juego.*
 
-### 2. Pantalla de juego
-![GameScreen](assets/images/secuence.jpeg)
-![GameScreen](assets/images/hori.jpeg)
-*Secuencias de animales, barra de tiempo pastel y animaciones al presionar cada botón.*
+### 2. Pantalla de juego – Vertical
+![GameScreen Vertical](assets/images/secuence.jpeg)  
+*Secuencia de animales en orientación vertical, barra de tiempo pastel y animaciones al presionar cada botón.*
+
+### 3. Pantalla de juego – Horizontal
+![GameScreen Horizontal](assets/images/hori.jpeg)  
+*Secuencia de animales en orientación horizontal, diseño responsivo.*
 
 ### 4. Pop-up de intento fallido
-![LoseDialog](assets/images/loser.jpeg)
+![LoseDialog](assets/images/loser.jpeg)  
 *Diálogo emergente que aparece cuando el jugador falla la secuencia.*
-
 
 ---
 
 ## ⚡ Características principales
 
-- Secuencias de animales aleatorias y progresivas por nivel  
-- Retroalimentación inmediata con sonidos 
-- Fondos degradados y diseño responsive  
-- Arquitectura modular para escalar fácilmente nuevos niveles, animales o efectos  
+- 🐢 Secuencias de animales aleatorias y progresivas por nivel  
+- 🔊 Retroalimentación inmediata con sonidos `.mpeg`  
+- 🎨 Fondos degradados y diseño responsive  
+- ⚙️ Arquitectura modular para escalar fácilmente nuevos niveles, animales o efectos  
 
 ---
 
@@ -38,8 +40,9 @@ Cada nivel aumenta la dificultad y el jugador recibe **retroalimentación inmedi
 - **Widgets clave**: `Scaffold`, `Column`, `Row`, `ClipRRect`, `LinearProgressIndicator`, `ElevatedButton`, `Dialog`  
 - **Controladores**: `GameController` para lógica de secuencias y niveles  
 - **Servicios**: `SoundService` para reproducir sonidos de botones  
-- **Assets**: imágenes de animales, fondos y sonidos  
+- **Assets**: imágenes de animales, fondos y sonidos `.mpeg`  
 - **Responsive**: `OrientationBuilder` para soportar portrait y landscape  
 
 ---
+
 
