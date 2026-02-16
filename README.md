@@ -5,22 +5,22 @@ Cada nivel aumenta la dificultad y el jugador recibe **retroalimentación inmedi
 
 ---
 
-## 🎮 Screenshots / GIFs
+## 🎮 Screenshots
 
 ### 1. Pantalla de inicio
-![HomeScreen](assets/images/home.jpeg)  
+<img src="assets/images/home.jpeg" alt="HomeScreen" width="300" />
 *Botón “Play” con diseño animado, fondo colorido y acceso al juego.*
 
 ### 2. Pantalla de juego – Vertical
-![GameScreen Vertical](assets/images/secuence.jpeg)  
+<img src="assets/images/secuence.jpeg" alt="GameScreen Vertical" width="300" />
 *Secuencia de animales en orientación vertical, barra de tiempo pastel y animaciones al presionar cada botón.*
 
 ### 3. Pantalla de juego – Horizontal
-![GameScreen Horizontal](assets/images/hori.jpeg)  
+<img src="assets/images/hori.jpeg" alt="GameScreen Horizontal" width="300" />
 *Secuencia de animales en orientación horizontal, diseño responsivo.*
 
 ### 4. Pop-up de intento fallido
-![LoseDialog](assets/images/loser.jpeg)  
+<img src="assets/images/loser.jpeg" alt="LoseDialog" width="300" />
 *Diálogo emergente que aparece cuando el jugador falla la secuencia.*
 
 ---
