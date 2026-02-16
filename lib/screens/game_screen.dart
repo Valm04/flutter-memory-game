@@ -163,7 +163,7 @@ class _GameScreenState extends State<GameScreen> {
                       minHeight: 25,
                       backgroundColor: Colors.white30, // azul pastel de fondo
                       valueColor: const AlwaysStoppedAnimation<Color>(
-                        Color(0xFF81D4FA), // progreso en blanco visible
+                        Color.fromARGB(255, 28, 175, 243), // progreso en blanco visible
                       ),
                     ),
                   ),
@@ -271,27 +271,18 @@ class _GameScreenState extends State<GameScreen> {
   }
 
   Widget _buildLandscapeLayout() {
-  return Column(
-    children: [
-      Expanded(
-        child: Center(child: _buildButton(0)),
+    return Center(
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        children: [
+          _buildButton(0),
+          _buildButton(1),
+          _buildButton(2),
+          _buildButton(3),
+        ],
       ),
-      Expanded(
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          children: [
-            _buildButton(1),
-            _buildButton(2),
-          ],
-        ),
-      ),
-      Expanded(
-        child: Center(child: _buildButton(3)),
-      ),
-    ],
-  );
-}
-
+    );
+  }
 
   //creamos un metodo para construir cada uno de los botones y no repetir código
   Widget _buildButton(int index) {

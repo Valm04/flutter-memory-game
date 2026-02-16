@@ -14,77 +14,92 @@ class GameDialog extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    //orientacion y tamaño de pantalla para adaptar el diálogo
+    final isLandscape =
+        MediaQuery.of(context).orientation == Orientation.landscape;
+    //ajustar el ancho del diálogo según la orientación
+    final screenWidth = MediaQuery.of(context).size.width;
+
     return Dialog(
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(25),
       ),
-      child: Container(
-        padding: const EdgeInsets.all(20),
-        decoration: BoxDecoration(
-          gradient: const LinearGradient(
-            colors: [
-              Color(0xFF81D4FA), // azul pastel
-              Color(0xFFB2EBF2), // azul aqua suave
-            ],
-            begin: Alignment.topLeft,
-            end: Alignment.bottomRight,
-          ),
-          borderRadius: BorderRadius.circular(25),
+      child: ConstrainedBox(
+        //ajustar el ancho máximo del diálogo según la orientación
+        constraints: BoxConstraints(
+          //si es vertical, ocupar el 85% del ancho, si es horizontal, ocupar el 60%
+          maxWidth: isLandscape ? screenWidth * 0.6 : screenWidth * 0.85,
         ),
-        child: Column(
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            const Image(image:  AssetImage('assets/animals/sad.png'), width: 80, height: 80),
-            const SizedBox(height: 10),
-            const Text(
-              "¡Chispas!",
-              style: TextStyle(
-                fontSize: 28,
-                fontWeight: FontWeight.bold,
-                color: Colors.black,
-              ),
-            ),
-            const SizedBox(height: 10),
-            Text(
-              "Llegaste al nivel $level",
-              style: const TextStyle(
-                fontSize: 18,
-                color: Colors.white,
-              ),
-            ),
-            const SizedBox(height: 20),
-
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                ElevatedButton.icon(
-                  style: ElevatedButton.styleFrom(
-                    backgroundColor: Colors.white,
-                    foregroundColor: Colors.deepPurple,
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(20),
-                    ),
-                  ),
-                  icon: const Icon(Icons.refresh),
-                  label: const Text("Reintentar"),
-                  onPressed: onRetry,
-                ),
-
-                ElevatedButton.icon(
-                  style: ElevatedButton.styleFrom(
-                    backgroundColor: Colors.white,
-                    foregroundColor: Colors.green,
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(20),
-                    ),
-                  ),
-                  icon: const Icon(Icons.home),
-                  label: const Text("Inicio"),
-                  onPressed: onHome,
-                ),
+        child: Container(
+          padding: const EdgeInsets.all(20),
+          decoration: BoxDecoration(
+            gradient: const LinearGradient(
+              colors: [
+                Color(0xFF81D4FA), // azul pastel
+                Color(0xFFB2EBF2), // azul aqua suave
               ],
-            )
-          ],
+              begin: Alignment.topLeft,
+              end: Alignment.bottomRight,
+            ),
+            borderRadius: BorderRadius.circular(25),
+          ),
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              const Image(
+                image: AssetImage('assets/animals/sad.png'),
+                width: 80,
+                height: 80,
+              ),
+              const SizedBox(height: 10),
+              const Text(
+                "¡Chispas!",
+                style: TextStyle(
+                  fontSize: 28,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.black,
+                ),
+              ),
+              const SizedBox(height: 10),
+              Text(
+                "Llegaste al nivel $level",
+                style: const TextStyle(
+                  fontSize: 18,
+                  color: Colors.white,
+                ),
+              ),
+              const SizedBox(height: 20),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  ElevatedButton.icon(
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: Colors.white,
+                      foregroundColor: Colors.deepPurple,
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(20),
+                      ),
+                    ),
+                    icon: const Icon(Icons.refresh),
+                    label: const Text("Reintentar"),
+                    onPressed: onRetry,
+                  ),
+                  ElevatedButton.icon(
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: Colors.white,
+                      foregroundColor: Colors.green,
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(20),
+                      ),
+                    ),
+                    icon: const Icon(Icons.home),
+                    label: const Text("Inicio"),
+                    onPressed: onHome,
+                  ),
+                ],
+              ),
+            ],
+          ),
         ),
       ),
     );
