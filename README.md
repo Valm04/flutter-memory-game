@@ -1,16 +1,45 @@
-# memory_game
+# 🧠 Memory Game – Flutter
 
-A new Flutter project.
+Memory Game es un juego interactivo donde el jugador debe **memorizar y repetir secuencias de botones con animales**.  
+Cada nivel aumenta la dificultad y el jugador recibe **retroalimentación inmediata con sonidos, animaciones y diálogos emergentes**.
 
-## Getting Started
+---
 
-This project is a starting point for a Flutter application.
+## 🎮 Screenshots / GIFs
 
-A few resources to get you started if this is your first Flutter project:
+### 1. Pantalla de inicio
+![HomeScreen](assets/images/home.png)
+*Botón “Play” con diseño animado, fondo colorido y acceso al juego.*
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+### 2. Pantalla de juego
+![GameScreen](assets/images/secuence.png)
+![GameScreen](assets/images/hori.png)
+*Secuencias de animales, barra de tiempo pastel y animaciones al presionar cada botón.*
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+### 4. Pop-up de intento fallido
+![LoseDialog](assets/images/loser.png)
+*Diálogo emergente que aparece cuando el jugador falla la secuencia.*
+
+
+---
+
+## ⚡ Características principales
+
+- Secuencias de animales aleatorias y progresivas por nivel  
+- Retroalimentación inmediata con sonidos 
+- Fondos degradados y diseño responsive  
+- Arquitectura modular para escalar fácilmente nuevos niveles, animales o efectos  
+
+---
+
+## 🛠️ Tecnologías y Widgets usados
+
+- **Flutter / Dart** – desarrollo cross-platform  
+- **Widgets clave**: `Scaffold`, `Column`, `Row`, `ClipRRect`, `LinearProgressIndicator`, `ElevatedButton`, `Dialog`  
+- **Controladores**: `GameController` para lógica de secuencias y niveles  
+- **Servicios**: `SoundService` para reproducir sonidos de botones  
+- **Assets**: imágenes de animales, fondos y sonidos  
+- **Responsive**: `OrientationBuilder` para soportar portrait y landscape  
+
+---
+
