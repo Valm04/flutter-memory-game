@@ -28,7 +28,7 @@ Cada nivel aumenta la dificultad y el jugador recibe **retroalimentación inmedi
 ## ⚡ Características principales
 
 - 🐢 Secuencias de animales aleatorias y progresivas por nivel  
-- 🔊 Retroalimentación inmediata con sonidos `.mpeg`  
+- 🔊 Retroalimentación inmediata con sonidos   
 - 🎨 Fondos degradados y diseño responsive  
 - ⚙️ Arquitectura modular para escalar fácilmente nuevos niveles, animales o efectos  
 
@@ -40,7 +40,7 @@ Cada nivel aumenta la dificultad y el jugador recibe **retroalimentación inmedi
 - **Widgets clave**: `Scaffold`, `Column`, `Row`, `ClipRRect`, `LinearProgressIndicator`, `ElevatedButton`, `Dialog`  
 - **Controladores**: `GameController` para lógica de secuencias y niveles  
 - **Servicios**: `SoundService` para reproducir sonidos de botones  
-- **Assets**: imágenes de animales, fondos y sonidos `.mpeg`  
+- **Assets**: imágenes de animales, fondos y sonidos 
 - **Responsive**: `OrientationBuilder` para soportar portrait y landscape  
 
 ---
