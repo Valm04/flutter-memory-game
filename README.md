@@ -12,12 +12,12 @@ Cada nivel aumenta la dificultad y el jugador recibe **retroalimentación inmedi
 *Botón “Play” con diseño animado, fondo colorido y acceso al juego.*
 
 ### 2. Pantalla de juego
-![GameScreen](assets/images/secuence.png)
-![GameScreen](assets/images/hori.png)
+![GameScreen](assets/images/secuence.jpeg)
+![GameScreen](assets/images/hori.jpeg)
 *Secuencias de animales, barra de tiempo pastel y animaciones al presionar cada botón.*
 
 ### 4. Pop-up de intento fallido
-![LoseDialog](assets/images/loser.png)
+![LoseDialog](assets/images/loser.jpeg)
 *Diálogo emergente que aparece cuando el jugador falla la secuencia.*
 
 
